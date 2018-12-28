@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.parallax-container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax {
+  background: rgba(0, 0, 0, .5);
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateZ(-1px) scale(1.55);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-blue {
+  background: #005;
+}
+
+.bg-red {
+  background: #500;
+}
+
+.bg-green {
+  background: #050;
+}
+
+#bg1::after {
+  background-image: url('https://images.unsplash.com/photo-1537111261224-6fa49cecda2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+}
+
+#bg2::after {
+  background-image: url('http://www.baltana.com/files/wallpapers-5/Night-HD-Wallpaper-17512.jpg');
+}
